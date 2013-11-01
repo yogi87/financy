@@ -12,6 +12,7 @@
 
 # Ignore the user's database configuration
 config/database.yml
+config/config.yml
 
 # Ignore all logfiles and tempfiles.
 /log/*.log

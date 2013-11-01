@@ -6,7 +6,8 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'mysql2'
+gem 'thin'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,6 +20,16 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
+
+group :development, :test do
+    gem 'rspec-rails'
+    gem 'capybara'
+    gem 'annotate', ">=2.5.0"
+    gem 'quiet_assets'
+    gem 'meta_request', '0.2.1'
+    gem "better_errors"
+    gem "hirb"
+  end
 
 gem 'jquery-rails'
 
