@@ -1,13 +1,7 @@
 class HomeController < ApplicationController
-  before_filter :authenticate
+http_basic_authenticate_with :name => APP_CONFIG['username'], :password => APP_CONFIG['password']
 
   def index
   end
 
-  protected
-  def authenticate
-    authenticate_or_request_with_http_basic do |username, password|
-    username == APP_CONFIG['username'] && password == APP_CONFIG['password']
-    end
-  end
 end
