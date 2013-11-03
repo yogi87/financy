@@ -5,7 +5,7 @@ gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'pg'
 gem 'mysql2'
 gem 'thin'
 
@@ -51,7 +51,4 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
-end
+gem 'rails_12factor', group: :production
